@@ -179,7 +179,6 @@
         },
         "kind": "StorageV2",
         "properties": {},
-        "tags": "[variables('resourceTagsLabbox')]"
       },
       {
         "type": "Microsoft.Compute/virtualMachines",
