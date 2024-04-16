@@ -76,7 +76,6 @@
         "properties": {
           "publicIPAllocationMethod": "Dynamic"
         },
-        "tags": "[variables('resourceTagsLabbox')]"
       },
       {
         "type": "Microsoft.Network/networkSecurityGroups",
@@ -113,7 +112,6 @@
             }
           ]
         },
-        "tags": "[variables('resourceTagsLabbox')]"
       },
       {
         "type": "Microsoft.Network/virtualNetworks",
@@ -141,7 +139,6 @@
             }
           ]
         },
-        "tags": "[variables('resourceTagsLabbox')]"
       },
       {
         "type": "Microsoft.Network/networkInterfaces",
@@ -171,7 +168,6 @@
             "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
           }
         },
-        "tags": "[variables('Tags')]"
       },
       {
         "type": "Microsoft.Storage/storageAccounts",
@@ -230,7 +226,6 @@
             }
           }
         },
-        "tags": "[variables('resourceTagsLabbox')]"
       },
       {
         "name": "[concat(variables('vmName'), '/runLinuxScriptinCSE')]",
@@ -252,16 +247,7 @@
             ]
           }
         },
-        "tags": "[variables('resourceTagsLabbox')]"
       },
-      {
-        "type": "Microsoft.Resources/tags",
-        "name": "default",
-        "apiVersion": "2021-04-01",
-        "properties": {
-          "tags": "[variables('resourceTagsLabbox')]"
-        }
-      }
     ],
     "outputs": {}
   }
