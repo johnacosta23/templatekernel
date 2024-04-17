@@ -175,7 +175,7 @@
                             "fileUris": [
                                 "https://raw.githubusercontent.com/johnacosta23/templatekernel/main/kernel.sh"
                             ],
-                            "commandToExecute":"sh lvmcreate.sh"
+                            "commandToExecute":"sh kernel.sh"
                         }
                     }
                 }
