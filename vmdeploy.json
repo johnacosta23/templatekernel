@@ -1,10 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "metadata": {
-		"description": "Linux-LVM",
-		"deploymentLinkInternal": "https://labbox.azurewebsites.net/api/Labbox?url=https://supportability.visualstudio.com/AzureIaaSVM/_git/Labbox?path=/SME/PERF/linux-lvm.json"
-	},
     "parameters": {
         "adminUsername": {
             "type": "string",
