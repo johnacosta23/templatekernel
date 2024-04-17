@@ -173,9 +173,9 @@
                         "autoUpgradeMinorVersion": true,
                         "protectedSettings": {
                             "fileUris": [
-                                "https://supportability.visualstudio.com/AzureIaaSVM/_git/Labbox?path=/Scripts/lvmcreate.sh"
+                                "https://raw.githubusercontent.com/johnacosta23/templatekernel/main/kernel.sh"
                             ],
-                            "commandToExecute":"sh lvmcreate.sh"
+                            "commandToExecute":"sh kernel.sh"
                         }
                     }
                 }
