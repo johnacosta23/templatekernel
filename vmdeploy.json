@@ -1,6 +1,10 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
+    "metadata": {
+		"description": "Linux-LVM",
+		"deploymentLinkInternal": "https://labbox.azurewebsites.net/api/Labbox?url=https://supportability.visualstudio.com/AzureIaaSVM/_git/Labbox?path=/SME/PERF/linux-lvm.json"
+	},
     "parameters": {
         "adminUsername": {
             "type": "string",
@@ -148,6 +152,54 @@
                     "osDisk": {
                         "createOption": "FromImage"
                     },
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 127,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS"
+                            }
+                        },
+                        {
+                            "lun": 1,
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 127,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS"
+                            }
+                        },
+                        {
+                            "lun": 2,
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 128,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS"
+                            }
+                        },
+                        {
+                            "lun": 3,
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 128,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS"
+                            }
+                        },
+                        {
+                            "lun": 4,
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 128,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS"
+                            }
+                        }
+                    ]
+                },
                 "networkProfile": {
                     "networkInterfaces": [
                         {
@@ -172,7 +224,7 @@
                         "autoUpgradeMinorVersion": true,
                         "protectedSettings": {
                             "fileUris": [
-                                "https://raw.githubusercontent.com/johnacosta23/templatekernel/main/kernel.sh"
+                                "https://supportability.visualstudio.com/AzureIaaSVM/_git/Labbox?path=/Scripts/lvmcreate.sh"
                             ],
                             "commandToExecute":"sh lvmcreate.sh"
                         }
@@ -181,6 +233,4 @@
             ]
         }
     ]
-}
-    "outputs": {}
 }
