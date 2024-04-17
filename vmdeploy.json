@@ -1,7 +1,7 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
+     "parameters": {
         "adminUsername": {
             "type": "string",
             "metadata": {
@@ -28,7 +28,7 @@
         "subnetName": "Subnet",
         "subnetPrefix": "10.0.0.0/24",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-        "vmName": "Linux-VM",
+        "vmName": "Linuxpool-vm",
         "virtualNetworkName": "MyVNET",
         "publicIPAddressName": "myPublicIP",
         "dnsNameForPublicIP": "[uniqueString(resourceGroup().id)]",
@@ -131,7 +131,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2_v2"
+                    "vmSize": "Standard_F16s_v2"
                 },
                 "osProfile": {
                     "computerName": "[variables('vmName')]",
