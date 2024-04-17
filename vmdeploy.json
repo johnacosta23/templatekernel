@@ -141,8 +141,8 @@
                 "storageProfile": {
                     "imageReference": {
                         "publisher": "redhat",
-                        "offer": "rhel-raw",
-                        "sku": "86-gen2",
+                        "offer": "rhel",
+                        "sku": "7.9",
                         "version": "latest"
                     },
                     "osDisk": {
